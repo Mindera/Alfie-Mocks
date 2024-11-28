@@ -181,7 +181,7 @@ const mockProductListing = {
       labels: null,
       attributes: null,
       defaultVariant: {
-        sku: 'UNKNOWN',
+        sku: 'AQN9W1T0',
         size: {
           id: '25927',
           value: '10 AU',
@@ -205,7 +205,7 @@ const mockProductListing = {
       },
       variants: [
         {
-          sku: 'UNKNOWN',
+          sku: 'AQN9W1T0',
           size: {
             id: '25927',
             value: '10 AU',
@@ -228,7 +228,7 @@ const mockProductListing = {
           }
         },
         {
-          sku: 'UNKNOWN',
+          sku: 'J9L1FCL9',
           size: {
             id: '25937',
             value: '12 AU',
@@ -251,7 +251,7 @@ const mockProductListing = {
           }
         },
         {
-          sku: 'UNKNOWN',
+          sku: 'RKIIHCSN',
           size: {
             id: '25974',
             value: '6 AU',
@@ -274,7 +274,7 @@ const mockProductListing = {
           }
         },
         {
-          sku: 'UNKNOWN',
+          sku: 'S93JEDTI',
           size: {
             id: '25988',
             value: '8 AU',
