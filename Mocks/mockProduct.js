@@ -335,7 +335,7 @@ const mockProductListing = {
       labels: null,
       attributes: null,
       defaultVariant: {
-        sku: 'UNKNOWN',
+        sku: 'CO063XLY',
         size: null,
         colour: {
           id: '3406539'
@@ -353,7 +353,7 @@ const mockProductListing = {
       },
       variants: [
         {
-          sku: 'UNKNOWN',
+          sku: 'CO063XLY',
           size: null,
           colour: {
             id: '3406539'
@@ -408,7 +408,7 @@ const mockProductListing = {
       labels: null,
       attributes: null,
       defaultVariant: {
-        sku: 'UNKNOWN',
+        sku: '5QC90W86',
         size: {
           id: '25927',
           value: '10 AU',
@@ -432,7 +432,7 @@ const mockProductListing = {
       },
       variants: [
         {
-          sku: 'UNKNOWN',
+          sku: '5QC90W86',
           size: {
             id: '25927',
             value: '10 AU',
@@ -455,7 +455,7 @@ const mockProductListing = {
           }
         },
         {
-          sku: 'UNKNOWN',
+          sku: 'BOIWXPI9',
           size: {
             id: '25937',
             value: '12 AU',
@@ -478,7 +478,7 @@ const mockProductListing = {
           }
         },
         {
-          sku: 'UNKNOWN',
+          sku: 'YJRGXR2R',
           size: {
             id: '26828',
             value: '14 AU',
@@ -501,7 +501,7 @@ const mockProductListing = {
           }
         },
         {
-          sku: 'UNKNOWN',
+          sku: '3H1XYPWS',
           size: {
             id: '26829',
             value: '16 AU',
@@ -524,7 +524,7 @@ const mockProductListing = {
           }
         },
         {
-          sku: 'UNKNOWN',
+          sku: '0TBYQN1U',
           size: {
             id: '25974',
             value: '6 AU',
@@ -547,7 +547,7 @@ const mockProductListing = {
           }
         },
         {
-          sku: 'UNKNOWN',
+          sku: '770BQHK5',
           size: {
             id: '25988',
             value: '8 AU',
