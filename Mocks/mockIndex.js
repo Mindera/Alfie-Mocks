@@ -1,5 +1,5 @@
 // Import mocks
-const { mockProduct, mockProductListing } = require('./mockProduct');
+const mockProductListing = require('./mockProduct');
 const mockBrands = require('./mockBrand');
 const { mockNavigation,  mockNavigationHandles } = require('./mockNavigation');
 const { mockSuggestionBrands, mockSuggestionKeywords, mockSuggestionProducts } = require('./mockSuggestion');
