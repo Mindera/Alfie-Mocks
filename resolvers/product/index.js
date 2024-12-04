@@ -1,10 +1,13 @@
 const data = require("./productListing.json");
 
-const ProductSummaryListing = {
+const ProductListingSort = {
     A_Z: "A_Z",
     Z_A: "Z_A",
     LOW_TO_HIGH: "LOW_TO_HIGH",
-    HIGH_TO_LOW: "HIGH_TO_LOW"
+    HIGH_TO_LOW: "HIGH_TO_LOW",
+    POPULAR: "POPULAR",
+    NEW: "NEW",
+    FAVOURITES: "FAVOURITES"
 };
 
 function product(_ , { id }) {
@@ -15,13 +18,13 @@ function productSummaryListing(_, { sort }) {
   let products = data.products;
 
   switch (sort) {
-    case ProductSummaryListing.A_Z:
+    case ProductListingSort.A_Z:
       products = products.sort((a, b) => (a.name > b.name ? 1 : -1));
       break;
-    case ProductSummaryListing.Z_A:
+    case ProductListingSort.Z_A:
       products = products.sort((a, b) => (a.name < b.name ? 1 : -1));
       break;
-    case ProductSummaryListing.LOW_TO_HIGH:
+    case ProductListingSort.LOW_TO_HIGH:
       products = products.sort((a, b) =>
         a.defaultVariant.price.amount.amount >
         b.defaultVariant.price.amount.amount
@@ -29,7 +32,7 @@ function productSummaryListing(_, { sort }) {
           : -1
       );
       break;
-    case ProductSummaryListing.HIGH_TO_LOW:
+    case ProductListingSort.HIGH_TO_LOW:
       products = products.sort((a, b) =>
         a.defaultVariant.price.amount.amount <
         b.defaultVariant.price.amount.amount
