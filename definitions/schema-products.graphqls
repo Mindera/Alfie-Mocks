@@ -17,6 +17,8 @@ extend type Query {
     categoryId: String
     "Filter by custom query"
     query: String
+    "Sort order"
+    sort: ProductSummaryListingSort
   ): ProductListing @deprecated(reason: "use productSummaryListing")
   "Retrieve a product by its ID."
   productSummaryListing(
