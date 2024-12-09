@@ -7,7 +7,7 @@ const ProductListingSort = {
     HIGH_TO_LOW: "HIGH_TO_LOW"
 };
 
-function productDetails(_ , { id }) {
+function product(_ , { id }) {
     return data.products.find((product) => product.id === id) || null;
 }
 
@@ -45,7 +45,7 @@ function productListing(_, { sort }) {
 }
 
 module.exports = {
-  productDetails,
+  product,
   productListing
 };
 

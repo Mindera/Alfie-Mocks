@@ -1,6 +1,6 @@
 extend type Query {
-  "Retrieve a product details by its ID."
-  productDetails("The product's ID" id: ID!): ProductDetails
+  "Retrieve a product by its ID."
+  product("The product's ID" id: ID!): Product
   "Retrieve a list of products"
   productListing(
     "Starting point"
@@ -39,41 +39,6 @@ input ProductListingRefineQuery {
 
 "A product for sale at Alfie."
 type Product {
-  "Unique ID for the product and its variants."
-  id: ID!
-  "DJ refer to products (including variants) as style numbers, so this is DJ's unique identifier."
-  styleNumber: String!
-  "The formal name of the product."
-  name: String!
-  "The brand of the product."
-  brand: Brand!
-  "For displaying a high and low price range if it exists."
-  priceRange: PriceRange
-  "One-line description of the product."
-  shortDescription: String!
-  "Detailed description of the product."
-  longDescription: String
-  "For building canonical URL to PDP."
-  slug: String!
-  "Details of category/classification for breadcrumbs."
-  hierarchy: [HierarchyItem!]!
-    @deprecated(reason: "Unavailable from iSAMS, do not use")
-  "Product attributes common to all variants."
-  attributes: [KeyValuePair!]
-  "Specific labels such as 'Bestseller' or 'New in'."
-  labels: [String!] @deprecated(reason: "Unavailable from iSAMS, do not use")
-  "The 'default' variant."
-  defaultVariant: Variant!
-  "All variants of the product, including the default one."
-  variants: [Variant!]!
-  "Aggregation of all available sizes from all variants."
-  sizes: [Size!]
-  "Aggregation of all available colours from all variants."
-  colours: [Colour!]
-}
-
-"Detailed information of for a product sale"
-type ProductDetails {
   "Unique ID for the product and its variants."
   id: ID!
   "DJ refer to products (including variants) as style numbers, so this is DJ's unique identifier."
