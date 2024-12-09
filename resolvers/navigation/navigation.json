@@ -616,7 +616,7 @@
         "type": "LISTING",
         "url": "/sale",
         "media": null,
-        "items": [],
+        "items": null,
         "attributes": [
             {
                 "key": "color",
@@ -629,7 +629,7 @@
         "type": "PAGE",
         "url": "/store-services",
         "media": null,
-        "items": [],
+        "items": null,
         "attributes": null
     }
 ]
