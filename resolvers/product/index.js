@@ -4,17 +4,14 @@ const ProductListingSort = {
     A_Z: "A_Z",
     Z_A: "Z_A",
     LOW_TO_HIGH: "LOW_TO_HIGH",
-    HIGH_TO_LOW: "HIGH_TO_LOW",
-    POPULAR: "POPULAR",
-    NEW: "NEW",
-    FAVOURITES: "FAVOURITES"
+    HIGH_TO_LOW: "HIGH_TO_LOW"
 };
 
-function product(_ , { id }) {
+function productDetails(_ , { id }) {
     return data.products.find((product) => product.id === id) || null;
 }
 
-function productSummaryListing(_, { sort }) {
+function productListing(_, { sort }) {
   let products = data.products;
 
   switch (sort) {
@@ -48,8 +45,7 @@ function productSummaryListing(_, { sort }) {
 }
 
 module.exports = {
-  product,
-  productListing: productSummaryListing,
-  productSummaryListing
+  productDetails,
+  productListing
 };
 

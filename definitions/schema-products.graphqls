@@ -1,27 +1,8 @@
 extend type Query {
-  "Retrieve a product by its ID."
-  product("The product's ID" id: ID!): Product
-    @deprecated(reason: "use productDetails")
   "Retrieve a product details by its ID."
   productDetails("The product's ID" id: ID!): ProductDetails
-  "Handler for products"
+  "Retrieve a list of products"
   productListing(
-    "Starting point"
-    offset: Int!
-    "Number of records"
-    limit: Int!
-    """
-    Filter by single category
-    Assumption: We are using a unique category ID
-    """
-    categoryId: String
-    "Filter by custom query"
-    query: String
-    "Sort order"
-    sort: ProductSummaryListingSort
-  ): ProductListing @deprecated(reason: "use productSummaryListing")
-  "Retrieve a product by its ID."
-  productSummaryListing(
     "Starting point"
     offset: Int!
     "Number of records"
@@ -36,15 +17,12 @@ extend type Query {
     "Additional filters"
     refine: [ProductListingRefineQuery!]
     "Sort order"
-    sort: ProductSummaryListingSort
-  ): ProductSummaryListing
+    sort: ProductListingSort
+  ): ProductListing
 }
 
-"Support sorting orders"
-enum ProductSummaryListingSort {
-  FAVOURITES
-  POPULAR
-  NEW
+"Support sorting products"
+enum ProductListingSort {
   LOW_TO_HIGH
   HIGH_TO_LOW
   A_Z
@@ -112,6 +90,13 @@ type ProductDetails {
   longDescription: String
   "For building canonical URL to PDP."
   slug: String!
+  "Details of category/classification for breadcrumbs."
+  hierarchy: [HierarchyItem!]!
+    @deprecated(reason: "Unavailable from iSAMS, do not use")
+  "Product attributes common to all variants."
+  attributes: [KeyValuePair!]
+  "Specific labels such as 'Bestseller' or 'New in'."
+  labels: [String!] @deprecated(reason: "Unavailable from iSAMS, do not use")
   "The 'default' variant."
   defaultVariant: Variant!
   "All variants of the product, including the default one."
