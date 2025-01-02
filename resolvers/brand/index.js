@@ -7,4 +7,3 @@ function brands() {
 module.exports = {
     brands
 };
-
