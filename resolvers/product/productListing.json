@@ -3,10 +3,10 @@
   "pagination": {
     "offset": 0,
     "limit": 20,
-    "total": 88,
-    "pages": 5,
+    "total": 20,
+    "pages": 1,
     "page": 1,
-    "nextPage": 20,
+    "nextPage": null,
     "previousPage": null
   },
   "products": [
